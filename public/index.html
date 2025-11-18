@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adopta tu amigo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        🐾 <span>Adopta tu amigo</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#mascotas">Mascotas</a></li>
+        <li><a href="#educacion">Tenencia responsable</a></li>
+        <li><a href="adopt.html">Formulario de adopción</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Encuentra a tu nuevo mejor amigo</h1>
+        <p>
+          Conecta con refugios y adopta de forma responsable. 
+          Juntos podemos reducir el abandono y mejorar la vida de miles de animales.
+        </p>
+        <a href="#mascotas" class="btn btn-primary">Ver mascotas en adopción</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.pexels.com/photos/5731860/pexels-photo-5731860.jpeg" alt="Persona con perro y gato" />
+      </div>
+    </section>
+  </header>
+
+  <main class="main">
+    <section id="mascotas" class="section">
+      <h2>Mascotas disponibles</h2>
+      <p class="section-subtitle">
+        Usa los filtros para encontrar la mascota que mejor se adapte a tu estilo de vida.
+      </p>
+
+      <div class="filters">
+        <div class="filter-group">
+          <label for="speciesFilter">Especie</label>
+          <select id="speciesFilter">
+            <option value="todas">Todas</option>
+            <option value="Perro">Perros</option>
+            <option value="Gato">Gatos</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="cityFilter">Ciudad</label>
+          <select id="cityFilter">
+            <option value="todas">Todas</option>
+            <option value="Bogotá">Bogotá</option>
+            <option value="Medellín">Medellín</option>
+            <option value="Cali">Cali</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="ageFilter">Edad</label>
+          <select id="ageFilter">
+            <option value="todas">Todas</option>
+            <option value="0-1">0 - 1 año</option>
+            <option value="1-3">1 - 3 años</option>
+            <option value="3-100">Más de 3 años</option>
+          </select>
+        </div>
+
+        <button id="clearFiltersBtn" class="btn btn-secondary">
+          Limpiar filtros
+        </button>
+      </div>
+
+      <div id="petsGrid" class="pets-grid">
+      </div>
+
+      <div id="petsEmptyMessage" class="empty-message hidden">
+        No encontramos mascotas con esos filtros. 
+        Prueba cambiando los criterios o vuelve más tarde. 💛
+      </div>
+    </section>
+
+    <section id="educacion" class="section section-alt">
+      <h2>Tenencia responsable</h2>
+      <div class="education-grid">
+        <article class="education-card">
+          <h3>Compromiso a largo plazo</h3>
+          <p>
+            Un perro o gato puede vivir más de 10 años. 
+            Antes de adoptar, asegúrate de que tu situación 
+            económica y de tiempo sea estable.
+          </p>
+        </article>
+        <article class="education-card">
+          <h3>Salud y bienestar</h3>
+          <p>
+            Las mascotas necesitan vacunas, desparasitación, 
+            visitas al veterinario y una alimentación adecuada.
+          </p>
+        </article>
+        <article class="education-card">
+          <h3>Ambiente seguro</h3>
+          <p>
+            Tu hogar debe ser un lugar seguro, libre de peligros 
+            y con espacios donde la mascota pueda descansar y jugar.
+          </p>
+        </article>
+        <article class="education-card">
+          <h3>Adopta, no compres</h3>
+          <p>
+            Adoptar ayuda a reducir el número de animales en la calle 
+            y le da una segunda oportunidad a quienes más la necesitan.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Adopta tu amigo · Proyecto académico PSP</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

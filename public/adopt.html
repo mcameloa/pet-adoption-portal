@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario de adopción - Adopta tu amigo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header header-small">
+    <nav class="navbar">
+      <div class="logo">
+        🐾 <span>Adopta tu amigo</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#mascotas">Mascotas</a></li>
+        <li><a href="index.html#educacion">Tenencia responsable</a></li>
+      </ul>
+    </nav>
+    <section class="hero hero-small">
+      <div class="hero-text">
+        <h1>Formulario de adopción</h1>
+        <p>
+          Cuéntanos sobre ti y tu hogar para asegurar que la adopción sea 
+          responsable y adecuada para ambos.
+        </p>
+      </div>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="section section-form">
+      <div id="selectedPetContainer" class="selected-pet">
+      </div>
+
+      <form id="adoptionForm" class="adoption-form">
+        <h2>Datos del adoptante</h2>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Nombre completo *</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Teléfono de contacto *</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="city">Ciudad *</label>
+            <select id="city" name="city" required>
+              <option value="">Selecciona una opción</option>
+              <option value="Bogotá">Bogotá</option>
+              <option value="Medellín">Medellín</option>
+              <option value="Cali">Cali</option>
+              <option value="Otra">Otra</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="housingType">Tipo de vivienda</label>
+            <select id="housingType" name="housingType">
+              <option value="">Selecciona una opción</option>
+              <option value="Apartamento">Apartamento</option>
+              <option value="Casa">Casa</option>
+              <option value="Finca">Finca</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="hasOtherPets">¿Tienes otras mascotas?</label>
+            <select id="hasOtherPets" name="hasOtherPets">
+              <option value="No">No</option>
+              <option value="Si">Sí</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="experience">Experiencia previa con mascotas</label>
+          <textarea id="experience" name="experience" rows="3"
+            placeholder="Cuéntanos si has tenido mascotas antes y cómo ha sido tu experiencia."></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="motivation">Motivación para adoptar *</label>
+          <textarea id="motivation" name="motivation" rows="4" required
+            placeholder="Explica por qué quieres adoptar y qué puedes ofrecerle a esta mascota."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+          <a href="index.html#mascotas" class="btn btn-secondary">Volver</a>
+        </div>
+
+        <p class="form-note">
+          * Campos obligatorios. Tu información será compartida con el refugio para 
+          continuar el proceso de adopción.
+        </p>
+
+        <div id="formMessage" class="form-message hidden"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Adopta tu amigo · Proyecto académico PSP</p>
+  </footer>
+
+  <script src="js/adopt.js"></script>
+</body>
+</html>
