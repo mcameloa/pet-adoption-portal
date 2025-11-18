@@ -32,7 +32,7 @@ npm install
 Ejecuta el proyecto:
 
 ``` bash
-npm start
+npm run dev
 ```
 
 El servidor estará disponible en:
