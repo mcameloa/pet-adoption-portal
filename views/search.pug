@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  section.search-hero
+    h1 Buscar Mascotas
+    p.subtitle Encuentra a tu compañero perfecto usando nuestros filtros de búsqueda
+
+  section.search-container
+    .search-filters
+      h2 Filtros de Búsqueda
+      form.search-form(action="/search" method="GET")
+        .form-group
+          label(for="type") Tipo de Mascota
+          select#type(name="type")
+            option(value="" selected=(!filters || !filters.type)) Todos
+            option(value="perro" selected=(filters && filters.type === "perro")) Perro
+            option(value="gato" selected=(filters && filters.type === "gato")) Gato
+            option(value="otro" selected=(filters && filters.type === "otro")) Otro
+        
+        .form-group
+          label(for="age") Edad
+          select#age(name="age")
+            option(value="" selected=(!filters || !filters.age)) Todas las edades
+            option(value="cachorro" selected=(filters && filters.age === "cachorro")) Cachorro/Joven (0-1 año)
+            option(value="adulto" selected=(filters && filters.age === "adulto")) Adulto (1-7 años)
+            option(value="senior" selected=(filters && filters.age === "senior")) Senior (7+ años)
+        
+        .form-group
+          label(for="size") Tamaño
+          select#size(name="size")
+            option(value="" selected=(!filters || !filters.size)) Todos los tamaños
+            option(value="pequeño" selected=(filters && filters.size === "pequeño")) Pequeño
+            option(value="mediano" selected=(filters && filters.size === "mediano")) Mediano
+            option(value="grande" selected=(filters && filters.size === "grande")) Grande
+        
+        .form-group
+          label(for="gender") Género
+          select#gender(name="gender")
+            option(value="" selected=(!filters || !filters.gender)) Ambos
+            option(value="macho" selected=(filters && filters.gender === "macho")) Macho
+            option(value="hembra" selected=(filters && filters.gender === "hembra")) Hembra
+        
+        .form-group
+          label(for="name") Buscar por nombre
+          input#name(type="text" name="name" placeholder="Ej: Max, Luna..." value=(filters && filters.name ? filters.name : ""))
+        
+        button.button.search-button(type="submit") Buscar Mascotas
+        a.button.button-secondary(href="/") Volver al inicio
+
+    .search-results
+      h2 Resultados de Búsqueda
+      if results && results.length > 0
+        .results-grid
+          each pet in results
+            .pet-card
+              .pet-image-placeholder
+                span 🐾
+              h3= pet.name
+              p.pet-info 
+                strong Tipo: 
+                span= pet.type
+              p.pet-info 
+                strong Edad: 
+                span= pet.age
+              p.pet-info 
+                strong Tamaño: 
+                span= pet.size
+              a.button.button-small(href="#") Ver Detalles
+      else
+        .no-results
+          p.message Encuentra tu mascota perfecta usando los filtros de búsqueda arriba.
+          p.submessage Por ahora, puedes filtrar por tipo, edad, tamaño y género.
+

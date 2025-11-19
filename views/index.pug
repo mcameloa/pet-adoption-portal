@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  section.hero
+    h1= title
+    p.subtitle Encuentra a tu compañero perfecto y dale un hogar lleno de amor
+    a.button(href="/search") Buscar Mascotas
+
+  section.features
+    h2 ¿Por qué elegir nuestro portal?
+    .features-grid
+      .feature-card
+        h3 🐾 Proceso simple
+        p Navega fácilmente entre cientos de mascotas buscando un hogar. El proceso de adopción es rápido y seguro.
+      .feature-card
+        h3 ❤️ Mascotas verificadas
+        p Todas las mascotas cuentan con información completa sobre su salud, personalidad y necesidades especiales.
+      .feature-card
+        h3 🏠 Apoyo continuo
+        p Ofrecemos recursos y guías para ayudarte a darle la mejor vida a tu nueva mascota después de la adopción.
+      .feature-card
+        h3 🤝 Comunidad solidaria
+        p Únete a una comunidad de personas comprometidas con el bienestar animal y la adopción responsable.
+
+  section.cta
+    h2 ¿Listo para adoptar?
+    p Cada mascota merece un hogar lleno de amor. Da el primer paso hoy.
+    a.button.cta-button(href="/search") Explorar Mascotas Disponibles
