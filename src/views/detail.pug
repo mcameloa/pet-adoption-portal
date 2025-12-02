@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  section.detail-hero
+    h1= pet.name
+    p.subtitle Conoce más sobre #{pet.name} y dale un hogar lleno de amor
+
+  section.detail-container
+    .detail-content
+      .pet-image-large
+        if pet.image && pet.image !== ""
+          img(src=pet.image alt=pet.name onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\\'font-size: 6em;\\'>🐾</span>';")
+        else
+          .pet-image-placeholder-large
+            span 🐾
+
+      .pet-details
+        h2 Información de #{pet.name}
+        
+        .details-grid
+          .detail-item
+            strong Tipo:
+            span= pet.type.charAt(0).toUpperCase() + pet.type.slice(1)
+          
+          .detail-item
+            strong Edad:
+            span= pet.age.charAt(0).toUpperCase() + pet.age.slice(1)
+          
+          .detail-item
+            strong Tamaño:
+            span= pet.size.charAt(0).toUpperCase() + pet.size.slice(1)
+          
+          .detail-item
+            strong Género:
+            span= pet.gender.charAt(0).toUpperCase() + pet.gender.slice(1)
+          
+          if pet.location
+            .detail-item
+              strong Ubicación:
+              span= pet.location
+          
+          if pet.vaccinated !== undefined
+            .detail-item
+              strong Vacunado:
+              span= pet.vaccinated ? 'Sí ✓' : 'No'
+        
+        if pet.description
+          .description-section
+            h3 Sobre #{pet.name}
+            p.pet-description-full= pet.description
+
+        .action-buttons
+          a.button.button-primary(href="/search") Volver a Búsqueda
+          a.button.button-secondary(href="#") Contactar para Adopción
+

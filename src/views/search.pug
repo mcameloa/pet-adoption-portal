@@ -82,7 +82,7 @@ block content
                 p.pet-info 
                   strong Vacunado: 
                   span= pet.vaccinated ? 'Sí' : 'No'
-              a.button.button-small(href="#") Ver Detalles
+              a.button.button-small(href="/pet/" + pet.id) Ver Detalles
       else
         .no-results
           p.message Encuentra tu mascota perfecta usando los filtros de búsqueda arriba.

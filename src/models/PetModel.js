@@ -24,6 +24,23 @@ class PetModel {
       return [];
     }
   }
+
+  /**
+   * Obtiene una mascota por su ID
+   * @param {number|string} id - ID de la mascota
+   * @returns {Promise<Object|null>} Mascota encontrada o null si no existe
+   */
+  static async getPetById(id) {
+    try {
+      const allPets = await this.getAllPets();
+      const petId = parseInt(id, 10);
+      const pet = allPets.find(p => p.id === petId);
+      return pet || null;
+    } catch (error) {
+      console.error('Error al obtener la mascota por ID:', error);
+      return null;
+    }
+  }
 }
 
 module.exports = PetModel;
