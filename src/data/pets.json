@@ -1,0 +1,113 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Max",
+      "type": "perro",
+      "age": "adulto",
+      "size": "mediano",
+      "gender": "macho",
+      "description": "Max es un perro muy amigable y juguetón. Le encanta jugar en el parque y es excelente con niños. Está entrenado y es muy obediente.",
+      "image": "/images/pets/max.jpg",
+      "location": "Bogotá",
+      "vaccinated": true
+    },
+    {
+      "id": 2,
+      "name": "Luna",
+      "type": "gato",
+      "age": "cachorro",
+      "size": "pequeño",
+      "gender": "hembra",
+      "description": "Luna es una gatita muy dulce y cariñosa. Le encanta acurrucarse y recibir mimos. Es perfecta para familias con o sin niños.",
+      "image": "/images/pets/luna.jpg",
+      "location": "Medellín",
+      "vaccinated": true
+    },
+    {
+      "id": 3,
+      "name": "Rocky",
+      "type": "perro",
+      "age": "senior",
+      "size": "grande",
+      "gender": "macho",
+      "description": "Rocky es un perro tranquilo y gentil. A pesar de ser grande, es muy cuidadoso y paciente. Ideal para familias que buscan un compañero calmado.",
+      "image": "/images/pets/rocky.jpg",
+      "location": "Cali",
+      "vaccinated": true
+    },
+    {
+      "id": 4,
+      "name": "Bella",
+      "type": "perro",
+      "age": "adulto",
+      "size": "pequeño",
+      "gender": "hembra",
+      "description": "Bella es una perrita pequeña pero con mucha energía. Le encanta correr y jugar. Perfecta para personas activas o familias pequeñas.",
+      "image": "/images/pets/bella.jpg",
+      "location": "Bogotá",
+      "vaccinated": true
+    },
+    {
+      "id": 5,
+      "name": "Simba",
+      "type": "gato",
+      "age": "adulto",
+      "size": "mediano",
+      "gender": "macho",
+      "description": "Simba es un gato independiente pero cariñoso. Disfruta de la tranquilidad del hogar y es muy limpio. Ideal para personas que buscan un compañero tranquilo.",
+      "image": "/images/pets/simba.jpg",
+      "location": "Barranquilla",
+      "vaccinated": true
+    },
+    {
+      "id": 6,
+      "name": "Coco",
+      "type": "perro",
+      "age": "cachorro",
+      "size": "mediano",
+      "gender": "macho",
+      "description": "Coco es un cachorro muy juguetón y curioso. Está en proceso de entrenamiento y aprenderá rápido. Necesita una familia paciente y amorosa.",
+      "image": "/images/pets/coco.jpg",
+      "location": "Cartagena",
+      "vaccinated": true
+    },
+    {
+      "id": 7,
+      "name": "Mia",
+      "type": "gato",
+      "age": "senior",
+      "size": "pequeño",
+      "gender": "hembra",
+      "description": "Mia es una gata mayor muy tranquila y cariñosa. Disfruta de largas siestas y mimos suaves. Perfecta para personas mayores o familias tranquilas.",
+      "image": "/images/pets/mia.jpg",
+      "location": "Bucaramanga",
+      "vaccinated": true
+    },
+    {
+      "id": 8,
+      "name": "Zeus",
+      "type": "perro",
+      "age": "adulto",
+      "size": "grande",
+      "gender": "macho",
+      "description": "Zeus es un perro grande y protector. Es leal y muy inteligente. Necesita espacio y ejercicio regular. Ideal para personas con experiencia con perros grandes.",
+      "image": "/images/pets/zeus.jpg",
+      "location": "Bogotá",
+      "vaccinated": true
+    },
+    {
+      "id": 9,
+      "name": "Nala",
+      "type": "gato",
+      "age": "cachorro",
+      "size": "pequeño",
+      "gender": "hembra",
+      "description": "Nala es una gatita joven muy activa y juguetona. Le encanta explorar y jugar con juguetes. Perfecta para familias con niños que buscan diversión.",
+      "image": "/images/pets/nala.jpg",
+      "location": "Pereira",
+      "vaccinated": false
+    }
+  ]
+}
+
