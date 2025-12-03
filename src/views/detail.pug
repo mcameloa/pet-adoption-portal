@@ -51,5 +51,17 @@ block content
 
         .action-buttons
           a.button.button-primary(href="/search") Volver a Búsqueda
-          a.button.button-secondary(href="#") Contactar para Adopción
+          button.button.button-secondary(onclick="openAdoptionModal()") Contactar para Adopción
+
+  // Modal de adopción
+  .modal-overlay#adoption-modal(style="display: none;")
+    .modal-container
+      .modal-header
+        h2 Solicitud de Adopción
+        button.modal-close(onclick="closeAdoptionModal()") ×
+      .modal-body
+        include adoption-form
+
+block scripts
+  script(src="/javascripts/adoption-form.js")
 

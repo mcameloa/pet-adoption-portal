@@ -1,0 +1,33 @@
+form#adoption-form.adoption-form(action="/adoption/submit" method="POST")
+  .form-content
+    p.form-subtitle Completa el siguiente formulario para solicitar la adopción de #{pet.name || 'esta mascota'}
+    
+    input(type="hidden" name="petId" id="petId" value=pet.id)
+    input(type="hidden" name="petName" id="petName" value=pet.name)
+    
+    .form-group
+      label(for="nombre") Nombre Completo *
+      input#nombre(type="text" name="nombre" required placeholder="Ej: Juan Pérez")
+    
+    .form-group
+      label(for="email") Email *
+      input#email(type="email" name="email" required placeholder="Ej: juan@example.com")
+    
+    .form-group
+      label(for="telefono") Teléfono *
+      input#telefono(type="tel" name="telefono" required placeholder="Ej: +57 300 123 4567")
+    
+    .form-group
+      label(for="direccion") Dirección *
+      input#direccion(type="text" name="direccion" required placeholder="Ej: Calle 123 #45-67, Bogotá")
+    
+    .form-group
+      label(for="motivo") Motivo de Adopción *
+      textarea#motivo(name="motivo" required rows="4" placeholder="Cuéntanos por qué quieres adoptar a esta mascota...")
+  
+  .form-actions
+    button.button.button-primary(type="submit") Enviar Solicitud
+    button.button.button-secondary(type="button" onclick="closeAdoptionModal()") Cancelar
+  
+  .form-message#form-message(style="display: none;")
+
